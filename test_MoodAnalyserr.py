@@ -4,5 +4,10 @@ class Test_MoodAnalyserrTest:
 
     def test_givenMessage_WhenSad_ShouldReturnSad(self):
         moodAnalyser = MoodAnalyserr()
-        mood = moodAnalyser.analyseMood("I am in sad mood")
+        mood = moodAnalyser.analyseMood("This is a sad message")
         assert mood == 'SAD'
+
+    def test_givenMessage_WhenSad_ShouldReturnSad(self):
+        moodAnalyser = MoodAnalyserr()
+        mood = moodAnalyser.analyseMood("This is a happy message")
+        assert mood == 'HAPPY'    
