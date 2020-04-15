@@ -1,8 +1,11 @@
 class MoodAnalyserr:
 
     def analyseMood(self,message):
-        if message.__contains__("sad"):
-            return "SAD"
-        else:
-            return "HAPPY"    
+        try:
 
+            if message.__contains__("sad"):
+                return "SAD"
+            else:
+                return "HAPPY"    
+        except Exception as e:
+            return "HAPPY"
