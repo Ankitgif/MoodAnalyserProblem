@@ -1,3 +1,4 @@
+from CustomExceptionClass import MoodAnalyseException
 class MoodAnalyserr:
 
     def analyseMood(self,message):
@@ -7,5 +8,6 @@ class MoodAnalyserr:
                 return "SAD"
             else:
                 return "HAPPY"    
+        
         except Exception as e:
-            return "HAPPY"
+            raise MoodAnalyseException("Please enter proper message")
