@@ -22,4 +22,4 @@ class Test_MoodAnalyserrTest:
         except Exception as exception:
             assert exception.message == "Please enter proper message"                           
                
-           
+    
