@@ -34,3 +34,9 @@ class Test_MoodAnalyserrTest:
         moodAnalyserr1 = MoodAnalyserFactory.createMoodAnalyser("I am in a happy mood") 
         moodAnalyser2 = MoodAnalyserr("I am in a happy mood")
         assert moodAnalyserr1 == moodAnalyser2
+
+    def test_givenNone_thenCalled_defaultContructor_ReturnObject(self):
+        
+        moodAnalyserr1 = MoodAnalyserFactory.createMoodAnalyser() 
+        moodAnalyser2 = MoodAnalyserr()
+        assert moodAnalyserr1 == moodAnalyser2
