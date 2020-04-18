@@ -9,5 +9,5 @@ class MoodAnalyserr:
             else:
                 return "HAPPY"    
         
-        except Exception as e:
+        except Exception as exception:
             raise MoodAnalyseException("Please enter proper message")
