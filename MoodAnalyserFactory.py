@@ -10,7 +10,7 @@ class MoodAnalyserFactory():
         return myObj
 
     @staticmethod
-    def createMoodAnalyser(message):
+    def createMoodAnalyser(message=None):
         moodAnalyserr = MoodAnalyserr(message)
         return moodAnalyserr
         
