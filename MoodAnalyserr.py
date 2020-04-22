@@ -11,6 +11,10 @@ class MoodAnalyserr:
 
             if message.__contains__("sad"):
                 return "SAD" 
+
+            if message == '':
+                raise MoodAnalyseException("Please enter proper message") 
+
             else:
                 return "HAPPY"    
         
