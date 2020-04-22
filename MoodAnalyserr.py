@@ -9,17 +9,13 @@ class MoodAnalyserr:
             if message == None:
                 message = self.message
 
-
             if message.__contains__("sad"):
-                return "SAD"
+                return "SAD" 
             else:
                 return "HAPPY"    
         
-        except Exception as exception:
+        except AttributeError:
             raise MoodAnalyseException("Please enter proper message")
-
 
     def __eq__(self,other):
         return self.message == other.message          
-
-    
