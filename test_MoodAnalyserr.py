@@ -40,3 +40,13 @@ class Test_MoodAnalyserrTest:
         moodAnalyserr1 = MoodAnalyserFactory.createMoodAnalyser() 
         moodAnalyser2 = MoodAnalyserr()
         assert moodAnalyserr1 == moodAnalyser2
+
+    def test_givenMessage_WhenNone_ShouldThrowSpecialisedException(self):
+        
+        moodAnalyser = MoodAnalyserr()
+        try:
+            moodAnalyser.analyseMood(None)    
+        except Exception as exception:
+            assert type(exception) == MoodAnalyseException     
+
+
