@@ -49,4 +49,13 @@ class Test_MoodAnalyserrTest:
         except Exception as exception:
             assert type(exception) == MoodAnalyseException     
 
+    def test_givenMessage_WhenEmpty_ShouldThrowCustomException(self):
+        try:
+            moodAnalyser = MoodAnalyserr()
+            mood = moodAnalyser.analyseMood("")
+            
+        except Exception as exception:
+            assert exception.message == "Please enter proper message"   
+
+
 
